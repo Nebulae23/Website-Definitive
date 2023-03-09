@@ -1,0 +1,47 @@
+<!DOCTYPE html lang="fr">
+<html>
+<head>
+<title>Landing Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing_page.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.b {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+  
+<div class=" b helper-display-container helper-animate-opacity helper-text-white">
+  <div class="bgimg">
+
+  </div>
+  <a href="{{ url_for('views.home')}}" class="helper-display-button">
+  
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Visiter
+    </a>
+  <div class="helper-display-topright helper-padding-large helper-xlarge">
+    Logo
+  </div>
+  <div class="helper-display-middle">
+    <h1 class="helper-jumbo helper-animate-top">I'm Artus</h1>
+    <hr class="helper-border-grey" style="margin:auto;width:40%">
+    <p class="helper-large helper-center">a Student</p>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>

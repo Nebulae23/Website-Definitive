@@ -1,0 +1,220 @@
+@import url(helper.css);
+@keyframes wheelHueColor {
+  from, to { color: hsl(324, 70%, 60%); }
+  10%      { color: hsl(360, 65%, 60%); }
+  20%      { color: hsl( 36, 80%, 60%); }
+  30%      { color: hsl( 72, 75%, 60%); }
+  40%      { color: hsl(108, 65%, 60%); }
+  50%      { color: hsl(144, 75%, 60%); }
+  60%      { color: hsl(180, 75%, 60%); }
+  70%      { color: hsl(216, 60%, 65%); }
+  80%      { color: hsl(252, 65%, 60%); }
+  90%      { color: hsl(288, 60%, 60%); }
+}
+@keyframes wheelHueBackground {
+  from, to { background: hsl(324, 70%, 45%);
+    box-shadow: 0 0 5px hsl(324, 70%, 45%),
+    0 0 25px hsl(324, 70%, 45%),
+    0 0 50px hsl(324, 70%, 45%),
+    0 0 200px hsl(324, 70%, 45%); }
+  10%      { background: hsl(360, 65%, 45%);box-shadow: 0 0 5px hsl(360, 65%, 45%),
+    0 0 25px hsl(360, 65%, 45%),
+    0 0 50px hsl(360, 65%, 45%),
+    0 0 200px hsl(360, 65%, 45%); }
+  20%      { background: hsl( 36, 80%, 45%);box-shadow: 0 0 5px hsl( 36, 80%, 45%),
+    0 0 25px hsl( 36, 80%, 45%),
+    0 0 50px hsl( 36, 80%, 45%),
+    0 0 200px hsl( 36, 80%, 45%); }
+  30%      { background: hsl( 72, 75%, 35%); box-shadow: 0 0 5px hsl( 72, 75%, 35%),
+    0 0 25px hsl( 72, 75%, 35%),
+    0 0 50px hsl( 72, 75%, 35%),
+    0 0 200px hsl( 72, 75%, 35%);}
+  40%      { background: hsl(108, 65%, 35%);box-shadow: 0 0 5px hsl(108, 65%, 35%),
+    0 0 25px hsl(108, 65%, 35%),
+    0 0 50px hsl(108, 65%, 35%),
+    0 0 200px hsl(108, 65%, 35%); }
+  50%      { background: hsl(144, 75%, 35%);box-shadow: 0 0 5px hsl(144, 75%, 35%),
+    0 0 25px hsl(144, 75%, 35%),
+    0 0 50px hsl(144, 75%, 35%),
+    0 0 200px hsl(144, 75%, 35%); }
+  60%      { background: hsl(180, 75%, 35%);box-shadow: 0 0 5px hsl(180, 75%, 35%),
+    0 0 25px hsl(180, 75%, 35%),
+    0 0 50px hsl(180, 75%, 35%),
+    0 0 200px hsl(180, 75%, 35%); }
+  70%      { background: hsl(216, 60%, 45%);box-shadow: 0 0 5px hsl(216, 60%, 45%),
+    0 0 25px hsl(216, 60%, 45%),
+    0 0 50px hsl(216, 60%, 45%),
+    0 0 200px hsl(216, 60%, 45%); }
+  80%      { background: hsl(252, 65%, 50%);box-shadow: 0 0 5px hsl(252, 65%, 50%,),
+    0 0 25px hsl(252, 65%, 50%),
+    0 0 50px hsl(252, 65%, 50%),
+    0 0 200px hsl(252, 65%, 50%); }
+  90%      { background: hsl(288, 60%, 40%);box-shadow: 0 0 5px hsl(288, 60%, 40%),
+    0 0 25px hsl(288, 60%, 40%),
+    0 0 50px hsl(288, 60%, 40%),
+    0 0 200px hsl(288, 60%, 40%); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+a{
+    position:absolute;
+    left: 50%;
+    right: 50%;
+    bottom:17.5%;
+    transform:translate(-50%,0%);
+    -ms-transform:translate(-50%,0%);
+    display: inline-block;
+    padding: 30px 30px;
+    margin: 40px 40;
+    color: hsl(324, 70%, 45%);;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    animation: wheelHueColor 30s infinite;
+    box-sizing: content-box;
+    width: 125px;
+    height: 50px;
+    text-align: center;
+    font-size: xx-large;
+
+   
+}
+a:hover{
+    background: hsl(324, 70%, 45%);;
+    color: #050801;
+    box-shadow: 0 0 5px hsl(324, 70%, 45%),
+                0 0 25px hsl(324, 70%, 45%),
+                0 0 50px hsl(324, 70%, 45%),
+                0 0 200px hsl(324, 70%, 45%);
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005); 
+     animation: wheelHueBackground 30s infinite;
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+  position:absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,hsl(324, 70%, 45%));
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+
+    from, to { background: linear-gradient(90deg,transparent hsl(324, 70%, 45%)); }
+    0%       { background: linear-gradient(90deg,transparent hsl(324, 70%, 45%));left: -100%; }
+    10%      { background: linear-gradient(90deg,transparent hsl(360, 65%, 45%)); }
+    20%      { background: linear-gradient(90deg,transparent hsl( 36, 80%, 45%)); }
+    30%      { background: linear-gradient(90deg,transparent hsl( 72, 75%, 35%)); }
+    40%      { background: linear-gradient(90deg,transparent hsl(108, 65%, 35%)); }
+    50%      { background: linear-gradient(90deg,transparent hsl(144, 75%, 35%));left: 100%; }
+    60%      { background: linear-gradient(90deg,transparent hsl(180, 75%, 35%)); }
+    70%      { background: linear-gradient(90deg,transparent hsl(216, 60%, 45%)); }
+    80%      { background: linear-gradient(90deg,transparent hsl(252, 65%, 50%)); }
+    90%      { background: linear-gradient(90deg,transparent hsl(288, 60%, 40%)); }
+    100%     { background: linear-gradient(90deg,transparent hsl(288, 60%, 40%));left: 100%; }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,hsl(324, 70%, 45%));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+
+    from, to { background: linear-gradient(180deg,transparent hsl(324, 70%, 45%)); }
+    0%       { background: linear-gradient(180deg,transparent hsl(324, 70%, 45%));top: -100%; }
+    10%      { background: linear-gradient(180deg,transparent hsl(360, 65%, 45%)); }
+    20%      { background: linear-gradient(180deg,transparent hsl( 36, 80%, 45%)); }
+    30%      { background: linear-gradient(180deg,transparent hsl( 72, 75%, 35%)); }
+    40%      { background: linear-gradient(180deg,transparent hsl(108, 65%, 35%)); }
+    50%      { background: linear-gradient(180deg,transparent hsl(144, 75%, 35%));top: 100%; }
+    60%      { background: linear-gradient(180deg,transparent hsl(180, 75%, 35%)); }
+    70%      { background: linear-gradient(180deg,transparent hsl(216, 60%, 45%)); }
+    80%      { background: linear-gradient(180deg,transparent hsl(252, 65%, 50%)); }
+    90%      { background: linear-gradient(180deg,transparent hsl(288, 60%, 40%)); }
+    100%     { background: linear-gradient(180deg,transparent hsl(288, 60%, 40%));top: 100%; }
+
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,hsl(324, 70%, 45%));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+
+    from, to { background: linear-gradient(270deg,transparent hsl(324, 70%, 45%)); }
+    0%       { background: linear-gradient(270deg,transparent hsl(324, 70%, 45%));right: -100%; }
+    10%      { background: linear-gradient(270deg,transparent hsl(360, 65%, 45%)); }
+    20%      { background: linear-gradient(270deg,transparent hsl( 36, 80%, 45%)); }
+    30%      { background: linear-gradient(270deg,transparent hsl( 72, 75%, 35%)); }
+    40%      { background: linear-gradient(270deg,transparent hsl(108, 65%, 35%)); }
+    50%      { background: linear-gradient(270deg,transparent hsl(144, 75%, 35%));right: 100%; }
+    60%      { background: linear-gradient(270deg,transparent hsl(180, 75%, 35%)); }
+    70%      { background: linear-gradient(270deg,transparent hsl(216, 60%, 45%)); }
+    80%      { background: linear-gradient(270deg,transparent hsl(252, 65%, 50%)); }
+    90%      { background: linear-gradient(270deg,transparent hsl(288, 60%, 40%)); }
+    100%     { background: linear-gradient(270deg,transparent hsl(288, 60%, 40%));right: 100%; }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,hsl(324, 70%, 45%));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+
+    from, to { background: linear-gradient(360deg,transparent hsl(324, 70%, 45%)); }
+    0%       { background: linear-gradient(360deg,transparent hsl(324, 70%, 45%));bottom: -100%; }
+    10%      { background: linear-gradient(360deg,transparent hsl(360, 65%, 45%)); }
+    20%      { background: linear-gradient(360deg,transparent hsl( 36, 80%, 45%)); }
+    30%      { background: linear-gradient(360deg,transparent hsl( 72, 75%, 35%)); }
+    40%      { background: linear-gradient(360deg,transparent hsl(108, 65%, 35%)); }
+    50%      { background: linear-gradient(360deg,transparent hsl(144, 75%, 35%));bottom: 100%; }
+    60%      { background: linear-gradient(360deg,transparent hsl(180, 75%, 35%)); }
+    70%      { background: linear-gradient(360deg,transparent hsl(216, 60%, 45%)); }
+    80%      { background: linear-gradient(360deg,transparent hsl(252, 65%, 50%)); }
+    90%      { background: linear-gradient(360deg,transparent hsl(288, 60%, 40%)); }
+    100%     { background: linear-gradient(360deg,transparent hsl(288, 60%, 40%));bottom: 100%; }
+}
+
+.bgimg {
+  background-image: url('images_css/J3B9XQ.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.45;
+}
+.helper-display-button{
+  position: absolute;
+  bottom: 15%;
+}
+html{
+  background-color: #000000;
+}
