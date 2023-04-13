@@ -81,7 +81,7 @@ button {
   width: 1.9rem;
   height: 1.5px;
   border-radius: 2px;
-  background-color: #eee;
+  background-color: #100f0f;
   transition: 0.5s;
   position: relative;
 }
@@ -92,7 +92,7 @@ button {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: #eee;
+  background-color: #e8e2e2;
   transition: 0.5s;
 }
 
@@ -174,7 +174,7 @@ header {
   background-color: #1179e7;
   border: none;
   border-radius: 25px;
-  color: #fff;
+  color: #070707;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
@@ -182,7 +182,7 @@ header {
 
 .container.active .bar {
   transform: rotate(360deg);
-  background-color: transparent;
+  background-color: white;
 }
 
 .container.active .bar:before {
